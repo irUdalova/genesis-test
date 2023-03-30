@@ -11,7 +11,7 @@ type TLessonParam = {
 };
 
 export function Lesson({ lesson, isActive, onLessonClick }: TLessonParam) {
-  const { title, previewImageLink, status } = lesson;
+  const { title, previewImageLink } = lesson;
   const isLocked = lesson.status === 'locked';
 
   return (
