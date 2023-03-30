@@ -1,0 +1,77 @@
+.lesson {
+  height: 100px;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+ 
+
+  &--locked {
+    position: relative;
+    background-color: transparent;
+    border: solid 2px #f6f6f6;
+  }
+
+  &--active {
+    background-color: #228be6;
+    color: white;
+  }
+
+  &--unlocked {
+    transform: scale(1);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  &--unlocked:hover {
+    transform: scale(1.01);
+    -webkit-box-shadow: 0px 2px 8px 1px rgba(194,194,194,0.45);
+    -moz-box-shadow: 0px 2px 8px 1px rgba(194,194,194,0.45);
+    box-shadow: 0px 2px 8px 1px rgba(194,194,194,0.45);
+  }
+
+  &__img {
+    max-width:100%;
+    height:auto;
+  }
+
+  &__preview {
+    min-width: 200px;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+
+    .lesson__img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    flex-basis: 50%;
+    padding: 30px 20px 20px;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__status--locked {
+    background-image: url('../../../public/assets/svg/lock.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 33px;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
+
+}
+
